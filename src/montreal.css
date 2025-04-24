@@ -1,0 +1,88 @@
+/**
+* @license
+*
+* Font Family: Montreal
+* Designed by: [Designer Name]
+* URL: [Font URL]
+*
+* Montreal Thin 
+* Montreal Thin Oblique 
+* Montreal Light 
+* Montreal Light Oblique 
+* Montreal Regular 
+* Montreal Oblique 
+* Montreal Medium 
+* Montreal Medium Oblique 
+* Montreal Bold 
+* Montreal Bold Oblique 
+*/
+@font-face {
+  font-family: "Montreal-Thin";
+  src: url("../fonts/Montreal Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montreal-ThinOblique";
+  src: url("../fonts/Montreal ThinOblique.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "Montreal-Light";
+  src: url("../fonts/Montreal Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montreal-LightOblique";
+  src: url("../fonts/Montreal LightOblique.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "Montreal-Regular";
+  src: url("../fonts/Montreal Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montreal-Oblique";
+  src: url("../fonts/Montreal Oblique.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "Montreal-Medium";
+  src: url("../fonts/Montreal Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montreal-MediumOblique";
+  src: url("../fonts/Montreal MediumOblique.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: oblique;
+}
+@font-face {
+  font-family: "Montreal-Bold";
+  src: url("../fonts/Montreal Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montreal-BoldOblique";
+  src: url("../fonts/Montreal BoldOblique.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: oblique;
+}

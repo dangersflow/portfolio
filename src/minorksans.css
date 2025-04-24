@@ -1,0 +1,231 @@
+/**
+* @license
+*
+* Font Family: Minork Sans
+* Designed by: [Designer Name]
+* URL: [Font URL]
+* 
+* Minork Sans Hairline 
+* Minork Sans HairlineItalic 
+* Minork Sans Thin 
+* Minork Sans ThinItalic 
+* Minork Sans Extralight 
+* Minork Sans ExtralightItalic 
+* Minork Sans Light 
+* Minork Sans LightItalic 
+* Minork Sans Regular 
+* Minork Sans Italic 
+* Minork Sans Medium 
+* Minork Sans MediumItalic 
+* Minork Sans Semibold 
+* Minork Sans SemiboldItalic 
+* Minork Sans Bold 
+* Minork Sans BoldItalic 
+* Minork Sans Extrabold 
+* Minork Sans ExtraboldItalic 
+* Minork Sans Black 
+* Minork Sans BlackItalic 
+* Minork Sans Heavy 
+* Minork Sans HeavyItalic 
+* Minork Sans Variable (Variable font)
+* Minork Sans VariableItalic (Variable font)
+*/
+
+@font-face {
+  font-family: "MinorkSans-Hairline";
+  src: url("../fonts/MinorkSans-Hairline.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Hairline.woff") format("woff"),
+    url("../fonts/MinorkSans-Hairline.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-HairlineItalic";
+  src: url("../fonts/MinorkSans-HairlineItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-HairlineItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-HairlineItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Thin";
+  src: url("../fonts/MinorkSans-Thin.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Thin.woff") format("woff"),
+    url("../fonts/MinorkSans-Thin.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-ThinItalic";
+  src: url("../fonts/MinorkSans-ThinItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-ThinItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-ThinItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Extralight";
+  src: url("../fonts/MinorkSans-Extralight.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Extralight.woff") format("woff"),
+    url("../fonts/MinorkSans-Extralight.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-ExtralightItalic";
+  src: url("../fonts/MinorkSans-ExtralightItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-ExtralightItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-ExtralightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Light";
+  src: url("../fonts/MinorkSans-Light.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Light.woff") format("woff"),
+    url("../fonts/MinorkSans-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-LightItalic";
+  src: url("../fonts/MinorkSans-LightItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-LightItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-LightItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Regular";
+  src: url("../fonts/MinorkSans-Regular.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Regular.woff") format("woff"),
+    url("../fonts/MinorkSans-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-Italic";
+  src: url("../fonts/MinorkSans-Italic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Italic.woff") format("woff"),
+    url("../fonts/MinorkSans-Italic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Medium";
+  src: url("../fonts/MinorkSans-Medium.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Medium.woff") format("woff"),
+    url("../fonts/MinorkSans-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-MediumItalic";
+  src: url("../fonts/MinorkSans-MediumItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-MediumItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-MediumItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Semibold";
+  src: url("../fonts/MinorkSans-Semibold.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Semibold.woff") format("woff"),
+    url("../fonts/MinorkSans-Semibold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-SemiboldItalic";
+  src: url("../fonts/MinorkSans-SemiboldItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-SemiboldItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-SemiboldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Bold";
+  src: url("../fonts/MinorkSans-Bold.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Bold.woff") format("woff"),
+    url("../fonts/MinorkSans-Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-BoldItalic";
+  src: url("../fonts/MinorkSans-BoldItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-BoldItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-BoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Extrabold";
+  src: url("../fonts/MinorkSans-Extrabold.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Extrabold.woff") format("woff"),
+    url("../fonts/MinorkSans-Extrabold.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-ExtraboldItalic";
+  src: url("../fonts/MinorkSans-ExtraboldItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-ExtraboldItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-ExtraboldItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Black";
+  src: url("../fonts/MinorkSans-Black.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Black.woff") format("woff"),
+    url("../fonts/MinorkSans-Black.ttf") format("truetype");
+  font-weight: 950;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-BlackItalic";
+  src: url("../fonts/MinorkSans-BlackItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-BlackItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-BlackItalic.ttf") format("truetype");
+  font-weight: 950;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "MinorkSans-Heavy";
+  src: url("../fonts/MinorkSans-Heavy.woff2") format("woff2"),
+    url("../fonts/MinorkSans-Heavy.woff") format("woff"),
+    url("../fonts/MinorkSans-Heavy.ttf") format("truetype");
+  font-weight: 1000;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MinorkSans-HeavyItalic";
+  src: url("../fonts/MinorkSans-HeavyItalic.woff2") format("woff2"),
+    url("../fonts/MinorkSans-HeavyItalic.woff") format("woff"),
+    url("../fonts/MinorkSans-HeavyItalic.ttf") format("truetype");
+  font-weight: 1000;
+  font-display: swap;
+  font-style: italic;
+}

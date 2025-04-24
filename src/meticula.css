@@ -1,0 +1,152 @@
+/**
+* @license
+*
+* Font Family: Meticula
+* Designed by: [Designer Name]
+* URL: [Font URL]
+*
+* Meticula Thin 
+* Meticula Thin Italic 
+* Meticula Extra Light 
+* Meticula Extra Light Italic 
+* Meticula Light 
+* Meticula Light Italic 
+* Meticula Regular 
+* Meticula Italic 
+* Meticula Medium 
+* Meticula Medium Italic 
+* Meticula Semi Bold 
+* Meticula Semi Bold Italic 
+* Meticula Bold 
+* Meticula Bold Italic 
+* Meticula Extra Bold 
+* Meticula Extra Bold Italic 
+* Meticula Outline 
+* Meticula Outline Italic 
+*/
+@font-face {
+  font-family: "Meticula-Thin";
+  src: url("../fonts/Meticula Thin.otf") format("opentype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Meticula-ThinItalic";
+  src: url("../fonts/Meticula Thin Italic.otf") format("opentype");
+  font-weight: 100;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Meticula-ExtraLight";
+  src: url("../fonts/Meticula Extra Light.otf") format("opentype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Meticula-ExtraLightItalic";
+  src: url("../fonts/Meticula Extra Light Italic.otf") format("opentype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Meticula-Light";
+  src: url("../fonts/Meticula Light.otf") format("opentype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Meticula-LightItalic";
+  src: url("../fonts/Meticula Light Italic.otf") format("opentype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Meticula-Regular";
+  src: url("../fonts/Meticula Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Meticula-Italic";
+  src: url("../fonts/Meticula Italic.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Meticula-Medium";
+  src: url("../fonts/Meticula Medium.otf") format("opentype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Meticula-MediumItalic";
+  src: url("../fonts/Meticula Medium Italic.otf") format("opentype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Meticula-SemiBold";
+  src: url("../fonts/Meticula Semi Bold.otf") format("opentype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Meticula-SemiBoldItalic";
+  src: url("../fonts/Meticula Semi Bold Italic.otf") format("opentype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Meticula-Bold";
+  src: url("../fonts/Meticula Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Meticula-BoldItalic";
+  src: url("../fonts/Meticula Bold Italic.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Meticula-ExtraBold";
+  src: url("../fonts/Meticula Extra Bold.otf") format("opentype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Meticula-ExtraBoldItalic";
+  src: url("../fonts/Meticula Extra Bold Italic.otf") format("opentype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Meticula-Outline";
+  src: url("../fonts/Meticula Outline.otf") format("opentype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Meticula-OutlineItalic";
+  src: url("../fonts/Meticula Outline Italic.otf") format("opentype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
