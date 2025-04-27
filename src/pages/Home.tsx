@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [animateHero, setAnimateHero] = useState(false);
+  //const [animateHero, setAnimateHero] = useState(false);
   const [animateDynamicText, setAnimateDynamicText] = useState(false);
   const [animateDock, setAnimateDock] = useState(false);
   const [addImage, setAddImage] = useState(false);
