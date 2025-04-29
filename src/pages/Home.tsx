@@ -8,6 +8,36 @@ import { Dock } from "@/components/ui/dock-two";
 import { Facebook, Github, Twitter, Mail, NotebookText } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
+import styled from "styled-components";
+
+//define responsive breakpoints
+const StyledAsyncImage = styled(AsyncImage)`
+  @media (min-width: 2251px) {
+    width: 54rem;
+  }
+
+  @media (max-width: 2250px) {
+    width: 46rem;
+  }
+
+  @media (max-width: 2100px) {
+    width: 40rem;
+  }
+`;
+
+const StyledHeroContainer = styled(motion.div)`
+  @media (min-width: 2251px) {
+    width: 74rem;
+  }
+
+  @media (max-width: 2250px) {
+    width: 65rem;
+  }
+
+  @media (max-width: 2100px) {
+    width: 60rem;
+  }
+`;
 
 export default function Home() {
   //const [animateHero, setAnimateHero] = useState(false);
@@ -75,7 +105,7 @@ export default function Home() {
               mass: 0.5,
             }}
           >
-            <motion.div className="relative">
+            <StyledHeroContainer className="relative 2xl:w-6xl">
               <motion.div className="absolute top-7/12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:text-2xl md:text-5xl 2xl:text-8xl ">
                 <BlurText
                   text="Hello, I am Frank!"
@@ -138,7 +168,7 @@ export default function Home() {
                 hue={0}
                 forceHoverState={false}
               />
-            </motion.div>
+            </StyledHeroContainer>
             <AnimatePresence>
               {addImage && (
                 <motion.div
@@ -161,10 +191,10 @@ export default function Home() {
                     restDelta: 0.001,
                   }}
                 >
-                  <AsyncImage
+                  <StyledAsyncImage
                     src="/ronnie.jpg"
                     alt="Ronnie"
-                    className="relative h-auto w-2xl rounded-4xl shadow-lg border-8 border-white"
+                    className="relative h-auto rounded-4xl shadow-lg border-8 border-white"
                     loader={<div style={{ background: "#888" }} />}
                   />
                 </motion.div>
