@@ -39,6 +39,10 @@ const StyledHeroContainer = styled(motion.div)`
   }
 `;
 
+const StyledGridContainer = styled(motion.div)`
+  max-width: 2272px;
+`;
+
 export default function Home() {
   //const [animateHero, setAnimateHero] = useState(false);
   const [animateDynamicText, setAnimateDynamicText] = useState(false);
@@ -87,7 +91,7 @@ export default function Home() {
       >
         <motion.div
           layout
-          className="flex flex-col min-h-screen overflow-hidden"
+          className="flex flex-col min-h-screen overflow-hidden justify-center items-center"
           style={{
             display: "flex",
             width: "100%",
@@ -96,7 +100,7 @@ export default function Home() {
           initial={{}}
         >
           <BackgroundBeams />
-          <motion.div
+          <StyledGridContainer
             className="grid grid-cols-2 justify-center items-center ml-28 mr-28"
             transition={{
               type: "spring",
@@ -200,7 +204,7 @@ export default function Home() {
                 </motion.div>
               )}
             </AnimatePresence>
-          </motion.div>
+          </StyledGridContainer>
         </motion.div>
       </motion.div>
       <motion.div
