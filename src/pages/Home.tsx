@@ -23,6 +23,22 @@ const StyledAsyncImage = styled(AsyncImage)`
   @media (max-width: 2100px) {
     width: 40rem;
   }
+
+  @media (max-width: 1500px) {
+    width: 30rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 900px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 70%;
+  }
 `;
 
 const StyledHeroContainer = styled(motion.div)`
@@ -37,10 +53,35 @@ const StyledHeroContainer = styled(motion.div)`
   @media (max-width: 2100px) {
     width: 60rem;
   }
+
+  @media (max-width: 1500px) {
+    width: 40rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 25rem;
+  }
+
+  @media (max-width: 900px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
 
 const StyledGridContainer = styled(motion.div)`
+  display: grid;
   max-width: 2272px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  margin: 0;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export default function Home() {
@@ -101,7 +142,7 @@ export default function Home() {
         >
           <BackgroundBeams />
           <StyledGridContainer
-            className="grid grid-cols-2 justify-center items-center ml-28 mr-28"
+            className="ml-28 mr-28"
             transition={{
               type: "spring",
               stiffness: 300,
@@ -109,7 +150,7 @@ export default function Home() {
               mass: 0.5,
             }}
           >
-            <StyledHeroContainer className="relative 2xl:w-6xl">
+            <StyledHeroContainer className="relative">
               <motion.div className="absolute top-7/12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:text-2xl md:text-5xl 2xl:text-8xl ">
                 <BlurText
                   text="Hello, I am Frank!"
@@ -119,7 +160,7 @@ export default function Home() {
                   className="relative text-center header text-balance"
                 />
                 <motion.div
-                  className="relative text-9xl text-center header"
+                  className="relative text-center header mt-9"
                   initial={{
                     opacity: 0,
                     y: -50,

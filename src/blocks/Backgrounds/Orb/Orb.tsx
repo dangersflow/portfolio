@@ -4,6 +4,18 @@
 
 import { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle, Vec3 } from "ogl";
+import styled from "styled-components";
+
+const StyledOrb = styled.div`
+  min-height: 100vh;
+
+  @media (max-width: 700px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+`;
 
 interface OrbProps {
   hue?: number;
@@ -290,5 +302,5 @@ export default function Orb({
     };
   }, [hue, hoverIntensity, rotateOnHover, forceHoverState]);
 
-  return <div ref={ctnDom} className="w-full h-full min-h-screen" />;
+  return <StyledOrb ref={ctnDom} className="w-full h-full" />;
 }
