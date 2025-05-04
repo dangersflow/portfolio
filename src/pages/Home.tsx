@@ -21,7 +21,7 @@ const StyledAsyncImage = styled(AsyncImage)`
   }
 
   @media (max-width: 2100px) {
-    width: 40rem;
+    width: 35rem;
   }
 
   @media (max-width: 1500px) {
@@ -51,7 +51,7 @@ const StyledHeroContainer = styled(motion.div)`
   }
 
   @media (max-width: 2100px) {
-    width: 60rem;
+    width: 55rem;
   }
 
   @media (max-width: 1500px) {

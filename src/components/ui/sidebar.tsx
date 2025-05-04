@@ -69,148 +69,154 @@ export default function Sidebar() {
         </div>
         <nav className="mt-4">
           <motion.ul className="space-y-2 flex flex-col w-full gap-4">
-            <motion.li
-              className="flex items-center space-x-3 border-t border-b border-input pt-5 pb-5 transition-colors pl-0.5"
-              onHoverStart={handleHomeHover}
-              onHoverEnd={handleHomeHover}
-              whileHover={{
-                backgroundColor: "var(--accent)",
-                cursor: "pointer",
-                transition: {
+            <motion.a href="/">
+              <motion.li
+                className="flex items-center space-x-3 border-t border-b border-input pt-5 pb-5 transition-colors pl-0.5"
+                onHoverStart={handleHomeHover}
+                onHoverEnd={handleHomeHover}
+                whileHover={{
+                  backgroundColor: "var(--accent)",
+                  cursor: "pointer",
+                  transition: {
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30,
+                  },
+                }}
+                animate={{
+                  width: isOpen ? 224 : 32,
+                }}
+                transition={{
                   type: "spring",
                   stiffness: 300,
                   damping: 30,
-                },
-              }}
-              animate={{
-                width: isOpen ? 224 : 32,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 30,
-              }}
-            >
-              <motion.div className="flex items-center justify-center h7 w-7">
-                <House className="h-7 w-7" />
-              </motion.div>
-              <AnimatePresence mode="popLayout">
-                {isOpen && (
-                  <motion.p
-                    className="text-lg"
-                    initial={{
-                      opacity: 0,
-                      x: -10,
-                    }}
-                    exit={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: homeHover ? 10 : 0 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                    }}
-                  >
-                    Home
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.li>
-            <motion.li
-              className="flex items-center space-x-3 border-t border-b border-input pt-5 pb-5 transition-colors pl-0.5"
-              whileHover={{
-                backgroundColor: "var(--accent)",
-                cursor: "pointer",
-                transition: {
+                }}
+              >
+                <motion.div className="flex items-center justify-center h7 w-7">
+                  <House className="h-7 w-7" />
+                </motion.div>
+                <AnimatePresence mode="popLayout">
+                  {isOpen && (
+                    <motion.p
+                      className="text-lg"
+                      initial={{
+                        opacity: 0,
+                        x: -10,
+                      }}
+                      exit={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: homeHover ? 10 : 0 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
+                    >
+                      Home
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.li>
+            </motion.a>
+            <motion.a href="/about">
+              <motion.li
+                className="flex items-center space-x-3 border-t border-b border-input pt-5 pb-5 transition-colors pl-0.5"
+                whileHover={{
+                  backgroundColor: "var(--accent)",
+                  cursor: "pointer",
+                  transition: {
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30,
+                  },
+                }}
+                onHoverStart={handleAboutHover}
+                onHoverEnd={handleAboutHover}
+                animate={{
+                  width: isOpen ? 224 : 32,
+                }}
+                transition={{
                   type: "spring",
                   stiffness: 300,
                   damping: 30,
-                },
-              }}
-              onHoverStart={handleAboutHover}
-              onHoverEnd={handleAboutHover}
-              animate={{
-                width: isOpen ? 224 : 32,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 30,
-              }}
-            >
-              <motion.div className="flex items-center justify-center h7 w-7">
-                <Book className="h-7 w-7" />
-              </motion.div>
-              <AnimatePresence mode="popLayout">
-                {isOpen && (
-                  <motion.p
-                    className="text-lg"
-                    initial={{
-                      opacity: 0,
-                      x: -10,
-                    }}
-                    exit={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: aboutHover ? 10 : 0 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                      delay: 0.05,
-                    }}
-                  >
-                    About
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.li>
-            <motion.li
-              className="flex items-center space-x-3 border-t border-b border-input pt-5 pb-5 transition-colors pl-0.5"
-              onHoverStart={handleContactHover}
-              onHoverEnd={handleContactHover}
-              whileHover={{
-                backgroundColor: "var(--accent)",
-                cursor: "pointer",
-                transition: {
+                }}
+              >
+                <motion.div className="flex items-center justify-center h7 w-7">
+                  <Book className="h-7 w-7" />
+                </motion.div>
+                <AnimatePresence mode="popLayout">
+                  {isOpen && (
+                    <motion.p
+                      className="text-lg"
+                      initial={{
+                        opacity: 0,
+                        x: -10,
+                      }}
+                      exit={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: aboutHover ? 10 : 0 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                        delay: 0.05,
+                      }}
+                    >
+                      About
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.li>
+            </motion.a>
+            <motion.a href="/contact">
+              <motion.li
+                className="flex items-center space-x-3 border-t border-b border-input pt-5 pb-5 transition-colors pl-0.5"
+                onHoverStart={handleContactHover}
+                onHoverEnd={handleContactHover}
+                whileHover={{
+                  backgroundColor: "var(--accent)",
+                  cursor: "pointer",
+                  transition: {
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30,
+                  },
+                }}
+                animate={{
+                  width: isOpen ? 224 : 32,
+                }}
+                transition={{
                   type: "spring",
                   stiffness: 300,
                   damping: 30,
-                },
-              }}
-              animate={{
-                width: isOpen ? 224 : 32,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                damping: 30,
-              }}
-            >
-              <motion.div className="flex items-center justify-center h7 w-7">
-                <Contact className="h-7 w-7" />
-              </motion.div>
-              <AnimatePresence mode="popLayout">
-                {isOpen && (
-                  <motion.p
-                    className="text-lg"
-                    layout
-                    key={"change-contact"}
-                    initial={{
-                      opacity: 0,
-                      x: -10,
-                    }}
-                    exit={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: contactHover ? 10 : 0 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                      delay: 0.1,
-                    }}
-                  >
-                    Contact
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </motion.li>
+                }}
+              >
+                <motion.div className="flex items-center justify-center h7 w-7">
+                  <Contact className="h-7 w-7" />
+                </motion.div>
+                <AnimatePresence mode="popLayout">
+                  {isOpen && (
+                    <motion.p
+                      className="text-lg"
+                      layout
+                      key={"change-contact"}
+                      initial={{
+                        opacity: 0,
+                        x: -10,
+                      }}
+                      exit={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: contactHover ? 10 : 0 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                        delay: 0.1,
+                      }}
+                    >
+                      Contact
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </motion.li>
+            </motion.a>
           </motion.ul>
         </nav>
       </div>
