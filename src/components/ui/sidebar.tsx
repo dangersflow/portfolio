@@ -5,6 +5,7 @@ import { useState } from "react";
 import { House, Book, Contact } from "lucide-react";
 import FrankLogo from "../frank-logo";
 import FrankLogoF from "../frank-logo-f";
+import { Link } from "react-router";
 
 const StyledSidebar = styled(motion.div)`
   display: flex;
@@ -69,7 +70,7 @@ export default function Sidebar() {
         </div>
         <nav className="mt-4">
           <motion.ul className="space-y-2 flex flex-col w-full gap-4">
-            <motion.a href="/">
+            <Link to={"/"}>
               <motion.li
                 className="flex items-center space-x-3 border-t border-b border-input pt-5 pb-5 transition-colors pl-0.5"
                 onHoverStart={handleHomeHover}
@@ -116,8 +117,8 @@ export default function Sidebar() {
                   )}
                 </AnimatePresence>
               </motion.li>
-            </motion.a>
-            <motion.a href="/about">
+            </Link>
+            <Link to="/about">
               <motion.li
                 className="flex items-center space-x-3 border-t border-b border-input pt-5 pb-5 transition-colors pl-0.5"
                 whileHover={{
@@ -165,8 +166,8 @@ export default function Sidebar() {
                   )}
                 </AnimatePresence>
               </motion.li>
-            </motion.a>
-            <motion.a href="/contact">
+            </Link>
+            <Link to="/contact">
               <motion.li
                 className="flex items-center space-x-3 border-t border-b border-input pt-5 pb-5 transition-colors pl-0.5"
                 onHoverStart={handleContactHover}
@@ -216,7 +217,7 @@ export default function Sidebar() {
                   )}
                 </AnimatePresence>
               </motion.li>
-            </motion.a>
+            </Link>
           </motion.ul>
         </nav>
       </div>
