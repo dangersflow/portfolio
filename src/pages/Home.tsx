@@ -5,7 +5,8 @@ import AnimatedTextCycle from "@/components/ui/animated-text-cycle";
 import { AsyncImage } from "@/components/ui/async-image";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { Dock } from "@/components/ui/dock-two";
-import { Facebook, Github, Twitter, Mail, NotebookText } from "lucide-react";
+import { on } from "events";
+import { Facebook, Github, Twitter, Mail, NotebookText, Linkedin } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -37,11 +38,12 @@ const StyledAsyncImage = styled(AsyncImage)`
   }
 
   @media (max-width: 700px) {
-    width: 70%;
+    width: 60%;
   }
 `;
 
 const StyledHeroContainer = styled(motion.div)`
+
   @media (min-width: 2251px) {
     width: 74rem;
   }
@@ -67,7 +69,16 @@ const StyledHeroContainer = styled(motion.div)`
   }
 
   @media (max-width: 700px) {
+    min-width: 800px;
     width: 100%;
+
+    .header {
+      font-size: 4rem;
+    }
+
+    .paragraph {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -84,6 +95,17 @@ const StyledGridContainer = styled(motion.div)`
   }
 `;
 
+const StyledHomeContainer = styled(motion.div)`
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+
+  @media (max-width: 700px) {
+    scroll-snap-type: none;
+    overflow-x: hidden;
+  }
+`
+
 export default function Home() {
   //const [animateHero, setAnimateHero] = useState(false);
   const [animateDynamicText, setAnimateDynamicText] = useState(false);
@@ -91,9 +113,8 @@ export default function Home() {
   const [addImage, setAddImage] = useState(false);
 
   const items = [
-    { icon: Facebook, label: "Facebook" },
-    { icon: Twitter, label: "Twitter" },
-    { icon: Github, label: "Github" },
+    { icon: Linkedin, label: "LinkedIn", onClick: () => window.open("https://www.linkedin.com/in/francisco-gonzalez-861333134/", "_blank") },
+    { icon: Github, label: "Github", onClick: () => window.open("https://github.com/dangersflow", "_blank") },
     { icon: Mail, label: "Mail" },
     { icon: NotebookText, label: "Resume" },
   ];
@@ -117,7 +138,7 @@ export default function Home() {
   }, []);
 
   return (
-    <motion.div className="snap-y snap-mandatory overflow-y-scroll h-screen items-center justify-center">
+    <StyledHomeContainer >
       <motion.div
         className="flex flex-col items-center justify-center min-h-screen w-full pl-16 snap-center"
         // style={{
@@ -132,7 +153,7 @@ export default function Home() {
       >
         <motion.div
           layout
-          className="flex flex-col min-h-screen overflow-hidden justify-center items-center"
+          className="flex flex-col min-h-screen justify-center items-center"
           style={{
             display: "flex",
             width: "100%",
@@ -183,7 +204,7 @@ export default function Home() {
                     <AnimatedTextCycle
                       words={["developer", "designer", "creator", "builder"]}
                       interval={3500}
-                      className="sm:text-xl md:text-4xl 2xl:text-5xl"
+                      className="sm:text-xl md:text-4xl 2xl:text-5xl paragraph"
                     />
                   </motion.span>
                 </motion.div>
@@ -280,6 +301,6 @@ export default function Home() {
           </motion.span>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </StyledHomeContainer>
   );
 }
