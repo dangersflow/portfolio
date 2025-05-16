@@ -10,67 +10,54 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-//define responsive breakpoints
-const StyledAsyncImage = styled(AsyncImage)`
-  @media (min-width: 2251px) {
-    width: 54rem;
+// Responsive grid system
+const StyledGridContainer = styled(motion.div)`
+  display: grid;
+  max-width: 2272px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+    max-width: min(95%, 2272px); /* Ensures grid doesn't stretch to extreme widths */
   }
 
-  @media (max-width: 2250px) {
-    width: 46rem;
+  @media (min-width: 1200px) {
+    gap: 3rem;
+    max-width: min(90%, 2272px);
   }
 
-  @media (max-width: 2100px) {
-    width: 35rem;
-  }
-
-  @media (max-width: 1500px) {
-    width: 30rem;
-  }
-
-  @media (max-width: 1200px) {
-    width: 20rem;
-  }
-
-  @media (max-width: 900px) {
-    width: 20rem;
-  }
-
-  @media (max-width: 700px) {
-    width: 60%;
+  @media (min-width: 2100px) {
+    gap: 4rem;
+    max-width: min(85%, 2272px);
   }
 `;
 
+// Responsive image styling - 70% size to balance with hero
+const StyledAsyncImage = styled(AsyncImage)`
+  width: 70%; /* Reduced from 100% to 70% */
+  max-width: 70%; /* Reduced from 100% to 70% */
+  height: auto;
+  
+  @media (max-width: 700px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+`;
+
+// Hero container - reverted text scaling
 const StyledHeroContainer = styled(motion.div)`
-
-  @media (min-width: 2251px) {
-    width: 74rem;
-  }
-
-  @media (max-width: 2250px) {
-    width: 65rem;
-  }
-
-  @media (max-width: 2100px) {
-    width: 55rem;
-  }
-
-  @media (max-width: 1500px) {
-    width: 40rem;
-  }
-
-  @media (max-width: 1200px) {
-    width: 25rem;
-  }
-
-  @media (max-width: 900px) {
-    width: 20rem;
-  }
+  width: 100%;
+  position: relative;
+  min-width: 0; /* Prevents flexbox from expanding beyond grid cell */
 
   @media (max-width: 700px) {
-    min-width: 800px;
-    width: 100%;
-
     .header {
       font-size: 4rem;
     }
@@ -81,29 +68,28 @@ const StyledHeroContainer = styled(motion.div)`
   }
 `;
 
-const StyledGridContainer = styled(motion.div)`
-  display: grid;
-  max-width: 2272px;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr;
-  margin: 0;
-
-  @media (min-width: 700px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-`;
-
 const StyledHomeContainer = styled(motion.div)`
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
-
+  padding-left: 64px; /* Add padding for sidebar */
+  
   @media (max-width: 700px) {
     scroll-snap-type: none;
     overflow-x: hidden;
   }
-`
+`;
+
+// Image container styling - ensures the image is 70% of its container
+const StyledImageContainer = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0; /* Prevents flexbox from expanding beyond grid cell */
+  margin: 0 auto;
+`;
 
 export default function Home() {
   //const [animateHero, setAnimateHero] = useState(false);
@@ -137,12 +123,9 @@ export default function Home() {
   }, []);
 
   return (
-    <StyledHomeContainer >
+    <StyledHomeContainer>
       <motion.div
-        className="flex flex-col items-center justify-center min-h-screen w-full pl-16 snap-center"
-        // style={{
-        //   justifyContent: animateHero ? "start" : "center",
-        // }}
+        className="flex flex-col items-center justify-center min-h-screen w-full snap-center"
         transition={{
           type: "spring",
           stiffness: 300,
@@ -154,7 +137,6 @@ export default function Home() {
           layout
           className="flex flex-col min-h-screen justify-center items-center"
           style={{
-            display: "flex",
             width: "100%",
             position: "relative",
           }}
@@ -162,7 +144,6 @@ export default function Home() {
         >
           <BackgroundBeams />
           <StyledGridContainer
-            className="ml-28 mr-28"
             transition={{
               type: "spring",
               stiffness: 300,
@@ -208,7 +189,7 @@ export default function Home() {
                   </motion.span>
                 </motion.div>
                 <motion.div
-                  className="relative text-7xl text-center paragraph"
+                  className="relative text-center paragraph"
                   initial={{
                     opacity: 0,
                     y: -50,
@@ -236,8 +217,7 @@ export default function Home() {
             </StyledHeroContainer>
             <AnimatePresence>
               {addImage && (
-                <motion.div
-                  className="relative flex justify-center items-center"
+                <StyledImageContainer
                   initial={{
                     opacity: 0,
                     y: -50,
@@ -259,20 +239,17 @@ export default function Home() {
                   <StyledAsyncImage
                     src="/ronnie.jpg"
                     alt="Ronnie"
-                    className="relative h-auto rounded-4xl shadow-lg border-8 border-white"
+                    className="h-auto rounded-4xl shadow-lg border-8 border-white"
                     loader={<div style={{ background: "#888" }} />}
                   />
-                </motion.div>
+                </StyledImageContainer>
               )}
             </AnimatePresence>
           </StyledGridContainer>
         </motion.div>
       </motion.div>
       <motion.div
-        className="flex flex-col items-center justify-center min-h-screen w-6xl pl-16 snap-center"
-        // style={{
-        //   justifyContent: animateHero ? "start" : "center",
-        // }}
+        className="flex flex-col items-center justify-center min-h-screen w-full snap-center"
         transition={{
           type: "spring",
           stiffness: 300,
@@ -295,7 +272,7 @@ export default function Home() {
             mass: 1,
           }}
         >
-          <motion.span className="text-7xl mt-8 text-start paragraph">
+          <motion.span className="text-7xl mt-8 text-start paragraph px-8">
             Tech Stack
           </motion.span>
         </motion.div>
